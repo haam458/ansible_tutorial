@@ -17,4 +17,4 @@ Ansible labor.
 - Git projekt
 npm install
 npm start
-EOF
+`EOF`
