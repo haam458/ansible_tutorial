@@ -4,8 +4,8 @@ Ansible labor.
 
 ## ANSIBLE LABOR 
 
-AUTOR: HEDY
-KUUPÄEV: 2026-01-30
+**AUTOR:** HEDY
+**KUUPÄEV:** 2026-01-30
 
 ## Eesmärk
 
