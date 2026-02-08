@@ -2,11 +2,12 @@ cat << `EOF` > README.md
 # ansible_tutorial
 Ansible labor.
 
-#ANSIBLE LABOR 
+## ANSIBLE LABOR 
 
-**AUTOR:**HEDY
-**KUUPÄEV:**2026-01-30
-##Eesmärk
+AUTOR: HEDY
+KUUPÄEV: 2026-01-30
+
+## Eesmärk
 
 Õppida Ansible kasutamist.
 
@@ -15,6 +16,7 @@ Ansible labor.
 - Playbook
 - Template
 - Git projekt
+
 npm install
 npm start
-`EOF`
+EOF
