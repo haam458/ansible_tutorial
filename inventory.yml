@@ -1,0 +1,8 @@
+---
+all:
+  children:
+    webservers:
+      hosts:
+        web01:
+          ansible_host: 10.0.23.21   # Sinu Ubuntu 2 IP
+          ansible_user: ansible
