@@ -1,4 +1,4 @@
-
+cat << `EOF` > README.md
 # ansible_tutorial
 Ansible labor.
 
@@ -15,4 +15,6 @@ Ansible labor.
 - Playbook
 - Template
 - Git projekt
+npm install
+npm start
 EOF
