@@ -9,6 +9,7 @@ temp/
 .env
 .env.local
 *.key
+.vault_pass
 
 # OS specific
 .DS_Store

@@ -1,0 +1,14 @@
+---
+- name: Deploy Development Environment
+  hosts: development
+  become: yes
+  gather_facts: yes
+  
+  roles:
+    - role: nginx
+      vars:
+        environment: "development"
+        server_name: "dev.example.local"
+        debug_mode: true
+        max_connections: 100
+        site_color: "#FFA500"  # Orange

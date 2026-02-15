@@ -1,0 +1,14 @@
+---
+- name: Deploy Production Environment
+  hosts: production
+  become: yes
+  gather_facts: yes
+  
+  roles:
+    - role: nginx
+      vars:
+        environment: "production"
+        server_name: "prod.example.com"
+        debug_mode: false
+        max_connections: 1000
+        site_color: "#00AA00"

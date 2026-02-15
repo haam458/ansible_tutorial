@@ -12,7 +12,8 @@
       - nginx
       - python3-passlib
     state: present
-  notify: start nginx
+  notify:
+    - start nginx
 
 # Nginx configuration
 - name: Deploy nginx configuration from template
@@ -24,19 +25,21 @@
     mode: '0644'
     backup: yes
     validate: 'nginx -t -c %s'
-  notify: reload nginx
+  notify:
+    - reload nginx
 
 # Security (production only)
 - name: Create htpasswd file for production
   community.general.htpasswd:
     path: /etc/nginx/.htpasswd
-    name: "{{ vault_admin_user | default('admin') }}"
-    password: "{{ vault_admin_password }}"
+    name: "{{ vault_db_password | default('admin') }}"
+    password: "{{ vault_db_password }}"
     owner: root
     group: www-data
-    mode: 0640
+    mode: '0640'
   when: not debug_mode
-  notify: reload nginx
+  notify:
+    - reload nginx
 
 # Website deployment
 - name: Deploy website from template
@@ -46,7 +49,6 @@
     owner: "{{ nginx_user }}"
     group: "{{ nginx_user }}"
     mode: '0644'
-
 # Service management
 - name: Ensure nginx is started and enabled
   service:
