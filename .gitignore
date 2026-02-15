@@ -10,6 +10,7 @@ temp/
 .env.local
 *.key
 .vault_pass
+group_vars/webservers/vault.yml
 
 # OS specific
 .DS_Store
