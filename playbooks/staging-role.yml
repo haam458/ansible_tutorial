@@ -1,0 +1,15 @@
+---
+- name: Deploy Staging Environment
+  hosts: staging
+  become: yes
+  gather_facts: yes
+  
+  roles:
+    - role: nginx
+      vars:
+        environment: "staging"
+        server_name: "staging.example.com"
+        debug_mode: true
+        max_connections: 500
+        site_color: "#FFFF00"  # Yellow
+        nginx_port: 8080  # Erinev port, et ei konflikti dev'iga
